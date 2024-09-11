@@ -76,7 +76,7 @@ function Dashboard() {
                   <h2>Holdings</h2>
                   <button>Expand all</button>
                 </div>
-                <p>You have no holdings in Goldfinch yet</p>
+                <p>You have no holdings in LocaleLending yet</p>
               </div>
               <div className="activity-section">
                 <div className='activity-section-header'>
