@@ -1084,7 +1084,7 @@ tbody tr:hover {
 }
 
 .accordion-content li:hover {
-  background-color: #cbcbcb;
+  background-color: #e3f2fd;
   border-radius: 0;
 }
 
@@ -1279,12 +1279,18 @@ tbody tr:hover {
   transition: stroke-dasharray 0.6s ease 0s;
 }
 
-.progress-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 0.5em;
-  font-weight: bold;
+.profile-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.profile-item .title {
+  color: #808080;
+  font-size: 16px;
+}
+
+.profile-item .value {
   color: #000;
+  font-size: 18px;
+  font-weight: '600';
 }

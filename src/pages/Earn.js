@@ -16,7 +16,7 @@ const closedDeals = [
 ];
 
 function Earn() {
-  const { walletAddress } = useAuthContext();
+  const { walletAddress, account } = useAuthContext();
   const [activeLoans, setActiveLoans] = useState('');
   const [totalLossRate, setTotalLossRate] = useState('');
   const [totalLoansRepaid, setTotalLoansRepaid] = useState('');
@@ -49,7 +49,9 @@ function Earn() {
 
   return (
     <div className="earn">
-      {walletAddress && (<UIDBanner text={"Go to my account"} onClick={handleClick} />)}
+      {!account && walletAddress && (
+        <UIDBanner text={"Go to my account"} onClick={handleClick} />
+      )}
       <div className="summary">
         <SummaryItem
           label="Active Loans"

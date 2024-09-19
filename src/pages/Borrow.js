@@ -70,7 +70,7 @@ function Borrow() {
     <div className='borrow'>
       <h1>Borrow</h1>
       <div className='borrow-container'>
-        <AccordionSidebar steps={steps} setCurrentStep={setCurrentStep}/>
+        <AccordionSidebar steps={steps} currentStep={currentStep} setCurrentStep={setCurrentStep}/>
         <form onSubmit={submitLoanRequest}>
           <div className="progress-container">
             <div className="progress-bar" style={{ width: '30%' }}></div>

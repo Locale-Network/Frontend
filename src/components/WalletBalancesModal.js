@@ -5,10 +5,11 @@ import { SlLogout } from "react-icons/sl";
 import { useAuthContext } from '../providers/authProvider';
 
 function WalletBalancesModal({ onClose }) {
-  const {setWalletAddress} = useAuthContext();
+  const { setWalletAddress, setAccount } = useAuthContext();
 
   const handleDisconnect = async () => {
     setWalletAddress(null);
+    setAccount(null);
     onClose();
   };
 

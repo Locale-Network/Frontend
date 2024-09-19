@@ -2,7 +2,13 @@ import React from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import { FaGlobe } from 'react-icons/fa';
 
-const KYCModal = ({ onClose, onBegin }) => {
+const KYCModal = ({ onClose, onBegin, disabled }) => {
+
+  const handleBegin = async () => {
+    onClose();
+    onBegin();
+  };
+
   return (
     <div className="kyc-modal-backdrop">
       <div className="kyc-modal">
@@ -28,7 +34,7 @@ const KYCModal = ({ onClose, onBegin }) => {
           </p>
         </div>
         <div className="kyc-modal-footer">
-          <button className="kyc-begin-button" onClick={onBegin}>Begin</button>
+          <button className="kyc-begin-button" onClick={handleBegin} disabled={disabled}>Begin</button>
         </div>
       </div>
     </div>
