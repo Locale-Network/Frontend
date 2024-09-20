@@ -11,6 +11,7 @@ import { FaTwitter, FaDiscord } from "react-icons/fa";
 import Account from "./pages/Account";
 import { AuthProvider } from "./providers/authProvider";
 import Header from "./components/Header";
+import Senior from "./pages/Senior";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path="/llp" element={<LLP />} />
               <Route path="/stake" element={<Stake />} />
               <Route path="/borrow" element={<Borrow />} />
+              <Route path="/pools/senior" element={<Senior />} />
             </Routes>
           </div>
 
