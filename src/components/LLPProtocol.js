@@ -48,10 +48,8 @@ const LLPProtocol = () => {
       </section>
 
       <section className="error-section">
-        <BiSolidError color="red" size={20} />
-        <p>
-          Sorry, you are not eligible to participate in the senior pool because you do not have a suitable UID.
-        </p>
+        <BiSolidError color="red" size={30} />
+        <p>Sorry, you are not eligible to participate in the senior pool because you do not have a suitable UID.</p>
       </section>
     </div>
   )

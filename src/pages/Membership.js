@@ -13,14 +13,18 @@ function Membership() {
         <button>How does it work?</button>
       </div>
 
-      {walletAddress && <>
-        <HowItWorks />
-        <h1>Vault</h1>
-        <div className="vault-container">
-          <AvailableAssets />
-          <Assets />
-        </div>
-      </>}
+      {walletAddress? (
+        <>
+          <HowItWorks />
+          <h1>Vault</h1>
+          <div className="vault-container">
+            <AvailableAssets />
+            <Assets />
+          </div>
+        </>
+      ) : (
+        <h3>Please connect to your wallet first.</h3>
+      )}
     </div>
   );
 }

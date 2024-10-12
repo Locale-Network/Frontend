@@ -27,7 +27,7 @@ const Risk = () => {
         <div className="detail-item">
           <strong>Deal structure</strong>
           <p>Liquidity pool</p>
-          <p>The Goldfinch protocol automatically allocates Senior Pool capital across various vetted Borrower Pools. All deals protected by 20-25% first-loss capital bar one legacy investment found <a href="/">here</a>.</p>
+          <p>The Locale Lending protocol automatically allocates Senior Pool capital across various vetted Borrower Pools. All deals protected by 20-25% first-loss capital bar one legacy investment found <a href="/">here</a>.</p>
         </div>
 
         <div className="detail-item">

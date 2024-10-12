@@ -62,7 +62,6 @@ function WalletModal({ onClose, setAddress }) {
       console.error('Error connecting to MetaMask:', error);
     }
   };
-  
 
   const connectWallet = async () => {
     // const provider = new WalletConnectProvider({

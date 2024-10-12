@@ -29,7 +29,7 @@ function HowItWorks() {
           <div className='item-body'>
             <h3 className="text-lg font-bold mb-2">Receive boosted yields</h3>
             <p>
-              Enhance your yields with Member Rewards, a percentage of the Goldfinch Treasury distributed pro-rata based on your Member Vault position.
+              Enhance your yields with Member Rewards, a percentage of the Locale Lending Treasury distributed pro-rata based on your Member Vault position.
             </p>
           </div>
         </div>

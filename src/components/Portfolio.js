@@ -91,26 +91,26 @@ const Portfolio = () => {
         </p>
 
         <div className="social-link">
-          <a href="https://linkedin"><LuLink />Website</a>
+          <a href="https://website"><LuLink />Website</a>
           <a href="https://linkedin"><FaLinkedin />Linkedin</a>
-          <a href="https://linkedin"><FaTwitter />Twitter</a>
+          <a href="https://x.com"><FaTwitter />Twitter</a>
         </div>
       </div>
       <div className="metrics" style={{ border: '1px solid #ccc', borderRadius: 10 }}>
         <div className="metric">
           <span className="label">No. of portfolio loans</span>
           <span className="info-icon"><FaInfoCircle color="gray"/></span>
-          <div className="value">9</div>
+          <div className="value">0</div>
         </div>
         <div className="metric">
           <span className="label">Total loss rate</span>
           <span className="info-icon"><FaInfoCircle color="gray"/></span>
-          <div className="value">14.55%</div>
+          <div className="value">0.00%</div>
         </div>
         <div className="metric">
           <span className="label">Principal outstanding</span>
           <span className="info-icon"><FaInfoCircle color="gray"/></span>
-          <div className="value">$60,950,942.78</div>
+          <div className="value">$0.00</div>
         </div>
       </div>
       <DealTable />
@@ -155,9 +155,9 @@ const DealTable = () => {
               <td>{deal.principalOwed}</td>
               <td>{deal.maturityDate}</td>
               <td>
-                <span className={`status ${getStatusClass(deal.status)}`}>
+                <p className={`status ${getStatusClass(deal.status)}`}>
                   {deal.status}
-                </span>
+                </p>
               </td>
             </tr>
           ))}

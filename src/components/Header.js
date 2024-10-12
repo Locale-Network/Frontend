@@ -12,7 +12,7 @@ import WalletModal from "../components/WalletModal";
 import { useAuthContext } from "../providers/authProvider";
 
 function Header() {
-  const {walletAddress, setWalletAddress} = useAuthContext();
+  const { walletAddress, setWalletAddress } = useAuthContext();
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isWalletBalancesModalOpen, setIsWalletBalancesModalOpen] = useState(false);
@@ -73,60 +73,6 @@ function Header() {
       document.addEventListener("mousedown", handleWalletBalanceClickOutside);
     };
   }, []);
-
-  useEffect(() => {
-    const checkIfWalletIsConnected = async () => {
-      if (window.ethereum) {
-        try {
-          const chainId = await window.ethereum.request({ method: 'eth_chainId' });
-          const arbitrumBlueberryChainId = '0x14865D0F05';
-  
-          if (chainId !== arbitrumBlueberryChainId) {
-            try {
-              await window.ethereum.request({
-                method: 'wallet_switchEthereumChain',
-                params: [{ chainId: arbitrumBlueberryChainId }],
-              });
-            } catch (switchError) {
-              if (switchError.code === 4902) {
-                try {
-                  await window.ethereum.request({
-                    method: 'wallet_addEthereumChain',
-                    params: [
-                      {
-                        chainId: arbitrumBlueberryChainId,
-                        chainName: 'Arbitrum Blueberry',
-                        rpcUrls: ['https://rpc.arb-blueberry.gelato.digital'],
-                        nativeCurrency: {
-                          name: 'CGT',
-                          symbol: 'CGT',
-                          decimals: 18,
-                        },
-                        blockExplorerUrls: ['https://arb-blueberry.gelatoscout.com'],
-                      },
-                    ],
-                  });
-                } catch (addError) {
-                  console.error("Failed to add the network:", addError);
-                }
-              }
-            }
-          }
-
-          const accounts = await window.ethereum.request({ method: 'eth_accounts' });
-          if (accounts.length > 0) {
-            setWalletAddress(accounts[0]);
-          }
-        } catch (error) {
-          console.error("Error connecting to Arbitrum Blueberry:", error);
-        }
-      } else {
-        console.error("MetaMask is not installed. Please install it to use this feature.");
-      }
-    };
-  
-    checkIfWalletIsConnected();
-  }, [setWalletAddress]);
 
   return (
     <header className="header">

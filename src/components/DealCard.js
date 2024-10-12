@@ -26,11 +26,11 @@ function DealCard({ title, subtitle, interest, apy, term, liquidity }) {
         <p>Variable USDC interest</p>
         <h1>{interest}</h1>
         <div className="deal-details-item">
-          <p>Variable GFI APY<FaInfoCircle onMouseEnter={() => handleMouseEnter("apy")} onMouseLeave={handleMouseLeave}/></p>
+          <p>Variable LLP APY<FaInfoCircle onMouseEnter={() => handleMouseEnter("apy")} onMouseLeave={handleMouseLeave}/></p>
           <strong>{apy}</strong>
           {hoveredItem === "apy" && (
             <div className="tooltip">
-              The Senior Pool’s total current estimated APY, including the current USDC APY and est. GFI rewards APY. The GFI rewards APY is volatile and changes based on several variables including the price of GFI, the total capital deployed on Locale Direct Capital, and Senior Pool’s utilization. Learn more in the <a href="/">Locale Direct Capital Documentation.</a>
+              The Senior Pool’s total current estimated APY, including the current USDC APY and est. LLP rewards APY. The LLP rewards APY is volatile and changes based on several variables including the price of LLP, the total capital deployed on Locale Direct Capital, and Senior Pool’s utilization. Learn more in the <a href="/">Locale Direct Capital Documentation.</a>
             </div>
           )}
         </div>

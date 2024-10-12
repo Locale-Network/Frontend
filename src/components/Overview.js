@@ -10,7 +10,7 @@ const Overview = () => {
             Total pool assets
             <FaInfoCircle color="gray"/>
           </div>
-          <div className="amount">$48,484,716.93</div>
+          <div className="amount">$0.00</div>
           <div className="progress-bar">
             <div className="progress-filled" style={{ width: '100%' }}></div>
           </div>
@@ -20,17 +20,17 @@ const Overview = () => {
           <div className="metric">
             <span className="label">Utilization rate</span>
             <span className="info-icon"><FaInfoCircle color="gray"/></span>
-            <div className="value">100.00%</div>
+            <div className="value">0.00%</div>
           </div>
           <div className="metric">
             <span className="label">Total loss rate</span>
             <span className="info-icon"><FaInfoCircle color="gray"/></span>
-            <div className="value">14.55%</div>
+            <div className="value">0.00%</div>
           </div>
           <div className="metric">
             <span className="label">Next repayment</span>
             <span className="info-icon"><FaInfoCircle color="gray"/></span>
-            <div className="value">Oct 22, 2023</div>
+            <div className="value">Oct 22, 2024</div>
           </div>
         </div>
       </div>
