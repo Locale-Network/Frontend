@@ -1,7 +1,6 @@
 import icon from "../assets/logo.jpg"
 
 function ClosedDeals({ deals }) {
-
   const getColor = (status) => {
     if (status === 'On Time') {
       return 'green';
@@ -13,34 +12,35 @@ function ClosedDeals({ deals }) {
   };
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Total loan amount</th>
-          <th>Maturity date</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        {deals.map((deal, index) => (
-          <tr key={index}>
-            <td>
-              <div className="deal_name_section">
-                <div className="deal_name_details">
-                  {deal.img? (<img src={require(`../assets/${deal.img}.png`)} alt="closed-deal" />) : (<img src={icon} alt="locale_pool" />)}
-                  <p>{deal.name}</p>
-                </div>
-                <p>{deal.description}</p>
-              </div>
-            </td>
-            <td>${deal.totalLoanAmount.toLocaleString()}</td>
-            <td>{deal.maturityDate}</td>
-            <td style={{ color: getColor(deal.status), fontWeight: 'bold' }}>{deal.status}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <>
+      {deals.map((deal, index) => (
+        <div key={index} className="deal-row">
+          <div className="deal-column deal-column-name-section">
+            <div className="deal-name-details">
+              {deal.img ? (
+                <img src={require(`../assets/${deal.img}.png`)} alt="closed-deal" />
+              ) : (
+                <img src={icon} alt="locale_pool" />
+              )}
+              <p>{deal.name}</p>
+            </div>
+            <h3>{deal.description}</h3>
+          </div>
+          <div className="deal-column deal-column-total-loan-amount">
+            <p>Total loan amount</p>
+            <h3>${deal.totalLoanAmount.toLocaleString()}</h3>
+          </div>
+          <div className="deal-column deal-column-maturity-date">
+            <p>Maturity date</p>
+            <h3>{deal.maturityDate}</h3>
+          </div>
+          <div className="deal-column deal-column-status">
+            <p>Status</p>
+            <h3 style={{ color: getColor(deal.status), fontWeight: 'bold' }}>{deal.status}</h3>
+          </div>
+        </div>
+      ))}
+    </>
   );
 }
 
